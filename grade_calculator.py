@@ -1,5 +1,6 @@
 import streamlit as st
 st.title("Grade Calculator")
+st.write("Made by yours truly Arizzy")
 f_grades = st.text_input("What are ur individual formative grades (separate by spaces)? ")
 s_grades = st.text_input("What are ur individual summative grades (separate by spaces)? ")
 g_goal = st.text_input("What is your goal grade? ")
