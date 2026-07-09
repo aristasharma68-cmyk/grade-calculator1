@@ -18,7 +18,7 @@ if st.button("Calculate"):
 
         st.write("Formative average: " + str(f_avg))
         st.write("Summative average: " + str(s_avg))
-        st.write("Final grade (weighted): " + str(final_grade))
+        st.success("Final grade (weighted): " + str(final_grade))
        
 # Pick ONE image/message based on the grade
         if final_grade != g_goal:
