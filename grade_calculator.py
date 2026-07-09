@@ -7,45 +7,45 @@ g_goal = st.text_input("What is your goal grade? ")
 col1, col2 = st.columns(2)
 with col1:
     if st.button("Calculate"):
-    try:
-        f_grades_list = [float(grade) for grade in f_grades.split()]
-        s_grades_list = [float(grade) for grade in s_grades.split()]
-
-        st.write("Formative grades: " + str(f_grades_list))
-        st.write("Summative grades: " + str(s_grades_list))
-
-        f_avg = sum(f_grades_list) / len(f_grades_list)
-        s_avg = sum(s_grades_list) / len(s_grades_list)
-        final_grade = (f_avg * 0.4) + (s_avg * 0.6)
-
-        st.write("Formative average: " + str(f_avg))
-        st.write("Summative average: " + str(s_avg))
-        st.success("Final grade (weighted): " + str(final_grade))
+        try:
+            f_grades_list = [float(grade) for grade in f_grades.split()]
+            s_grades_list = [float(grade) for grade in s_grades.split()]
+    
+            st.write("Formative grades: " + str(f_grades_list))
+            st.write("Summative grades: " + str(s_grades_list))
+    
+            f_avg = sum(f_grades_list) / len(f_grades_list)
+            s_avg = sum(s_grades_list) / len(s_grades_list)
+            final_grade = (f_avg * 0.4) + (s_avg * 0.6)
+    
+            st.write("Formative average: " + str(f_avg))
+            st.write("Summative average: " + str(s_avg))
+            st.success("Final grade (weighted): " + str(final_grade))
        
 # Pick ONE image/message based on the grade
-        if final_grade != g_goal:
-            st.warning("You have not hit your goal yet!, Don't worry keep on working hard!")
-        if final_grade == g_goal:
-            st.sucess("Good Job! You have hit your goal")
-        if final_grade < 70:
-            st.warning("We need to get that grade up!")
-        
-        elif final_grade < 75:
-            st.warning("You're close — a little more effort!")
-       
-        else:
-            st.success("Good job, You are passing!")
-        rounded_grade = round(final_grade)
-        if rounded_grade == 67:
-            st.audio("67 bloxfruit.mp3", autoplay = True)
-        elif rounded_grade == 21:
-            st.audio("21 meme.mp3", autoplay = True)
-        elif rounded_grade == 100:
-            st.audio("mewing.mp3", autoplay = True)
-        if rounded_grade == 69:
-            st.audio("sus.mp3", autoplay = True)
-    except ValueError:
-        st.error("Please enter valid number only")
+            if final_grade != g_goal:
+                st.warning("You have not hit your goal yet!, Don't worry keep on working hard!")
+            if final_grade == g_goal:
+                st.sucess("Good Job! You have hit your goal")
+            if final_grade < 70:
+                st.warning("We need to get that grade up!")
+            
+            elif final_grade < 75:
+                st.warning("You're close — a little more effort!")
+           
+            else:
+                st.success("Good job, You are passing!")
+             rounded_grade = round(final_grade)
+             if rounded_grade == 67:
+                 st.audio("67 bloxfruit.mp3", autoplay = True)
+             elif rounded_grade == 21:
+                 st.audio("21 meme.mp3", autoplay = True)
+             elif rounded_grade == 100:
+                 st.audio("mewing.mp3", autoplay = True)
+             if rounded_grade == 69:
+                 st.audio("sus.mp3", autoplay = True)
+        except ValueError:
+            st.error("Please enter valid number only")
 with col2:
     if st.button("Restart"):
         st.rerun()
