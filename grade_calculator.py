@@ -19,7 +19,7 @@ if st.button("Calculate"):
         st.write("Formative average: " + str(f_avg))
         st.write("Summative average: " + str(s_avg))
         st.write("Final grade (weighted): " + str(final_grade))
-
+       
 # Pick ONE image/message based on the grade
         if final_grade != g_goal:
             st.warning("You have not hit your goal yet!, Don't worry keep on working hard!")
@@ -27,11 +27,20 @@ if st.button("Calculate"):
             st.sucess("Good Job! You have hit your goal")
         if final_grade < 70:
             st.warning("We need to get that grade up!")
-    
+        
         elif final_grade < 75:
             st.warning("You're close — a little more effort!")
-   
+       
         else:
             st.success("Good job, You are passing!")
+        if rounded_grade = round(final_grade)
+        if rounded_grade == 67:
+            st.audio("67 bloxfruit.mp3", autoplay = True)
+        elif rounded_grade == 21:
+            st.audio("21 meme.mp3", autoplay = True)
+        elif rounded_grade == 100:
+            st.audio("mewing.mp3", autoplay = True)
+        if rounded_grade == 69:
+            st.audio("sus.mp3", autoplay = True)
     except ValueError:
         st.error("Please enter valid number only")
