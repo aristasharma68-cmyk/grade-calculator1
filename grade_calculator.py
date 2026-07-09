@@ -32,18 +32,18 @@ with col1:
             
             elif final_grade < 75:
                 st.warning("You're close — a little more effort!")
-           
             else:
                 st.success("Good job, You are passing!")
-             rounded_grade = round(final_grade)
-             if rounded_grade == 67:
-                 st.audio("67 bloxfruit.mp3", autoplay = True)
-             elif rounded_grade == 21:
-                 st.audio("21 meme.mp3", autoplay = True)
-             elif rounded_grade == 100:
-                 st.audio("mewing.mp3", autoplay = True)
-             if rounded_grade == 69:
-                 st.audio("sus.mp3", autoplay = True)
+            
+            rounded_grade = round(final_grade)
+            if rounded_grade == 67:
+                st.audio("67 bloxfruit.mp3", autoplay = True)
+            elif rounded_grade == 21:
+                st.audio("21 meme.mp3", autoplay = True)
+            elif rounded_grade == 100:
+                st.audio("mewing.mp3", autoplay = True)
+            if rounded_grade == 69:
+                st.audio("sus.mp3", autoplay = True)
         except ValueError:
             st.error("Please enter valid number only")
 with col2:
