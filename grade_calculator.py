@@ -4,7 +4,9 @@ st.write("Made by yours truly, Arizzy")
 f_grades = st.text_input("What are ur individual formative grades (separate by spaces)? ")
 s_grades = st.text_input("What are ur individual summative grades (separate by spaces)? ")
 g_goal = st.text_input("What is your goal grade? ")
-if st.button("Calculate"):
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("Calculate"):
     try:
         f_grades_list = [float(grade) for grade in f_grades.split()]
         s_grades_list = [float(grade) for grade in s_grades.split()]
@@ -44,5 +46,6 @@ if st.button("Calculate"):
             st.audio("sus.mp3", autoplay = True)
     except ValueError:
         st.error("Please enter valid number only")
-if st.button("Restart"):
-    st.rerun()
+with col2:
+    if st.button("Restart"):
+        st.rerun()
