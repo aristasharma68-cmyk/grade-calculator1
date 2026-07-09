@@ -44,3 +44,5 @@ if st.button("Calculate"):
             st.audio("sus.mp3", autoplay = True)
     except ValueError:
         st.error("Please enter valid number only")
+if st.button("Restart"):
+    st.rerun()
