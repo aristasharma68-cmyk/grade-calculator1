@@ -33,7 +33,7 @@ if st.button("Calculate"):
        
         else:
             st.success("Good job, You are passing!")
-        if rounded_grade = round(final_grade)
+        rounded_grade = round(final_grade)
         if rounded_grade == 67:
             st.audio("67 bloxfruit.mp3", autoplay = True)
         elif rounded_grade == 21:
