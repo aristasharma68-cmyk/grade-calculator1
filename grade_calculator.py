@@ -7,7 +7,7 @@ if st.button("Compound Interest Calculator"):
 
 if st.button("Back to Grade Calculator"):
     st.session_state.page = "grade"
-    if st.session_state.page = "grade":
+    if st.session_state.page == "grade":
     st.title("Grade Calculator")
     st.write("Made by yours truly, Arizzy")
     f_grades = st.text_input("What are ur individual formative grades (separate by spaces)? ")
