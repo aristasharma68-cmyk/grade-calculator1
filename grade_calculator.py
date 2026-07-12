@@ -57,6 +57,7 @@ if st.session_state.page == "grade":
 
 elif st.session_state.page == "compound":
     st.title("Compound Interest Calculator")
+    st.write("Made by yours truly, Arista")
     if st.button("Back to Grade Calculator"):
         st.session_state.page = "grade"
     princi = st.text_input("Type in your principal.")
