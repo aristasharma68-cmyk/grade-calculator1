@@ -78,7 +78,7 @@ elif st.session_state.page == "compound":
             st.write("Rate per period: " + str(step2))
             st.write("Total compounding periods: " + str(step3))
             st.write("Growth multiplier: " + str(step4))
-            st.success("Final amount: " + str(step5))
+            st.success("Final amount: " + str(round(step5, 2)))
             st.success("Interest earned: " + str(step6))
         except ValueError:
             st.error("Please enter valid numbers only.")
