@@ -70,7 +70,7 @@ elif st.session_state.page == "compound":
             annual = float(annual)
             howmany = int(howmany)
             times = int(times)
-            step2 = annual * howmany
+            step2 = annual / howmany
             step3 = howmany * times
             step4 = (1 + step2) ** step3
             step5 = step4 * princi
