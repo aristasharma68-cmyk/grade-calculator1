@@ -5,7 +5,7 @@ if "page" not in st.session_state:
 
 if st.session_state.page == "grade":
     st.title("Grade Calculator")
-    st.write("Made by yours truly, Arizzy")
+    st.write("Made by Arista Sharma")
     f_grades = st.text_input("What are ur individual formative grades (separate by spaces)? ")
     s_grades = st.text_input("What are ur individual summative grades (separate by spaces)? ")
     g_goal = st.text_input("What is your goal grade? ")
