@@ -27,6 +27,8 @@ if st.session_state.page == "grade":
                 st.write("Formative average: " + str(f_avg))
                 st.write("Summative average: " + str(s_avg))
                 st.success("Final grade (weighted): " + str(final_grade))
+                points = (goal - final_grade)
+                st.success(" You need " + str(points) + "of points to hit your goal")
 
                 if final_grade != goal:
                     st.warning("You have not hit your goal yet!, Don't worry keep on working hard!")
